@@ -1,0 +1,27 @@
+<html lang="en">
+<%- include("./partials/header.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="create-blog content">
+    <form action="/books" method="POST">
+      <label for="Title">Book title:</label>
+      <input type="text" id="title" name="Title" required>
+      <label for="datePublished">Date published:</label>
+      <input  type="datetime-local" name="datePublished" required> 
+      <label for="Publisher">Publisher:</label>
+      <input type="text" id="publisher" name="Publisher" required>
+      <label for="Genre">Book genre:</label>
+      <input type="text" id="snippet" name="Genre" required>
+       <label for="pageCount">PageCount:</label>
+      <input type="number" id="PageCount" name="pageCount" required>
+      <label for="Description">Book description:</label>
+      <textarea id="body" name="Description" required></textarea>
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>
